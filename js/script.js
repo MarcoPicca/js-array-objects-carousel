@@ -56,3 +56,20 @@ imgCarouse.src = `${imgSpiderman.image}`;
 
 carouse.appendChild(imgCarouse);
 
+
+
+const containerMiniImg = document.getElementById('container-mini-img');
+
+
+for (let i = 0; i <= 5; i++ ){
+
+    let miniImg = images[i];
+
+    const miniImgCaruse = document.createElement('img');
+    miniImgCaruse.classList.add('mini-img');
+    miniImgCaruse.src = `${miniImg.image}`;
+
+
+    containerMiniImg.appendChild(miniImgCaruse);
+
+}

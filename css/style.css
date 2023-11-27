@@ -14,10 +14,12 @@ main{
 
 #container-carouse{
     width: 60%;
-    height: 350px;
-    border: 1px solid red;
+    height: 400px;
+    
     border-radius: 3px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 img.spiderman{
@@ -25,4 +27,23 @@ img.spiderman{
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.container-article{
+    width: 20%;
+    height: 100%;
+    
+    border-radius: 3px;
+}
+
+article{
+    height: calc(( 100% / 5) - .2rem);
+    
+}
+
+article img.mini-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
 }
