@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    height: 100vh;
+    background-color: rgb(17, 17, 71);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-carouse{
+    width: 60%;
+    height: 350px;
+    border: 1px solid red;
+    border-radius: 3px;
+    margin: 0 auto;
+}
+
+img.spiderman{
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
