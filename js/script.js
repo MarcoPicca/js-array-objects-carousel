@@ -44,17 +44,21 @@ const images = [
 ];
 
 
-const carouse = document.getElementById('container-carouse');
+const carousel = document.getElementById('container-carousel');
+
+let buttonUp = document.getElementsByClassName('btn-up');
+let buttonDown = document.getElementsByClassName('btn-down');
+
 
 
 let imgSpiderman = images[0];
 
-const imgCarouse = document.createElement('img');
-imgCarouse.classList.add('spiderman');
-imgCarouse.src = `${imgSpiderman.image}`;
+const imgCarousel = document.createElement('img');
+imgCarousel.classList.add('big-img');
+imgCarousel.src = `${imgSpiderman.image}`;
 
 
-carouse.appendChild(imgCarouse);
+carousel.appendChild(imgCarousel);
 
 
 
@@ -65,11 +69,20 @@ for (let i = 0; i <= 5; i++ ){
 
     let miniImg = images[i];
 
-    const miniImgCaruse = document.createElement('img');
-    miniImgCaruse.classList.add('mini-img');
-    miniImgCaruse.src = `${miniImg.image}`;
+    const miniImgCarusel = document.createElement('img');
+    miniImgCarusel.classList.add('mini-img');
+    miniImgCarusel.src = `${miniImg.image}`;
 
 
-    containerMiniImg.appendChild(miniImgCaruse);
+    containerMiniImg.appendChild(miniImgCarusel);
 
 }
+
+
+
+
+
+
+
+
+

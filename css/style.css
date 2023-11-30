@@ -8,11 +8,26 @@ main{
     height: 100vh;
     background-color: rgb(17, 17, 71);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#container-carouse{
+.btn-up{
+    width: 100px;
+    height: 1.5rem;
+    margin-left: 46rem;
+    border-radius: 40px 40px 0 0;
+}
+
+.btn-down{
+    width: 100px;
+    height: 1.5rem;
+    margin-left: 46rem;
+    border-radius: 0 0 40px 40px;
+}
+
+#container-carousel{
     width: 60%;
     height: 400px;
     
@@ -22,7 +37,7 @@ main{
     flex-direction: row-reverse;
 }
 
-img.spiderman{
+img.big-img{
     width: 80%;
     height: 100%;
     object-fit: cover;
