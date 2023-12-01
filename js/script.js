@@ -44,18 +44,57 @@ const images = [
 ];
 
 
+
+
+// let activeIndex = 0;
+
+// images.forEach((element, index) => {
+    //     const classesForActiveSlide = (index === activeIndex) ? 'active' : '';
+    //     carousel.innerHTML += generateNewSlide(element.url, element.title, element.description,
+    //         index, classesForActiveSlide);
+    // });
+    
+// document.getElementsByClassName('btn-up').addEventListener('click', function() {
+    //     if(--activeIndex < 0) activeIndex = images.length - 1;
+    //     changeToSlide(activeIndex);
+    // });
+        
+// document.getElementsByClassName('btn-down').addEventListener('click', function(){
+    //     if(++activeIndex >= images.length) activeIndex = 0;
+    //     changeToSlide(activeIndex);
+    // } );
+            
+
+
 const carousel = document.getElementById('container-carousel');
 
-let buttonUp = document.getElementsByClassName('btn-up');
-let buttonDown = document.getElementsByClassName('btn-down');
+let btnUp = document.getElementsByClassName('btn-up');
+let btnDown = document.getElementsByClassName('btn-down');
+            
+            
+let index = 0;
 
+let activeIndex = images[index].image;
 
+function clickButtonUp (){btnUp.addEventListener('click', function(){
+    activeIndex++;
+    if (activeIndex >= images.length){
+        activeIndex = 0;
+    }
+})
+};
 
-let imgSpiderman = images[0];
+function clickButtonDown(){ btnDown.addEventListener('click', function(){
+    activeIndex--;
+    if (activeIndex < 0){
+        activeIndex = 4;
+    }
+})
+};
 
 const imgCarousel = document.createElement('img');
 imgCarousel.classList.add('big-img');
-imgCarousel.src = `${imgSpiderman.image}`;
+imgCarousel.src = `${activeIndex}`;  
 
 
 carousel.appendChild(imgCarousel);
@@ -67,16 +106,18 @@ const containerMiniImg = document.getElementById('container-mini-img');
 
 for (let i = 0; i <= 5; i++ ){
 
-    let miniImg = images[i];
+    let miniImg = images[i].image;
 
     const miniImgCarusel = document.createElement('img');
     miniImgCarusel.classList.add('mini-img');
-    miniImgCarusel.src = `${miniImg.image}`;
+    miniImgCarusel.src = `${miniImg}`;
 
 
     containerMiniImg.appendChild(miniImgCarusel);
 
 }
+
+
 
 
 
